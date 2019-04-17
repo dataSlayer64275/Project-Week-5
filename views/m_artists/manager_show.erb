@@ -1,0 +1,7 @@
+<p>Name: <%= @artist.name %></p>
+<p>Life: <%= @artist.year_of_birth %> - <%= @artist.year_of_death %></p>
+<p>Biography: <%= @artist.biography %></p>
+<form method="get" action="/artists_manager/<%= @artist.id %>/edit">
+  <input type="submit" value="Edit artist"/></form>
+<form method="post" action="/artists_manager/<%= @artist.id %>/delete">
+  <input type="submit" value="Delete artist"/></form>

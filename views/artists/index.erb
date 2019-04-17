@@ -1,0 +1,6 @@
+<% @artists.each do |artist| %>
+  <p>Name: <%= artist.name() %></p>
+  <p><%= artist.year_of_birth %> - <%= artist.year_of_death %></p>
+  <p><a href="/artists/<%= artist.id %>">More details</a></p>
+  <hr />
+<% end %>

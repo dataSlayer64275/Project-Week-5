@@ -1,0 +1,9 @@
+<form method="get" action="/artists_manager/new">
+  <input type="submit" value="New artist"/></form>
+
+<% @artists.each do |artist| %>
+  <p>Name: <%= artist.name() %></p>
+  <p><%= artist.year_of_birth %> - <%= artist.year_of_death %></p>
+  <p><a href="/artists_manager/<%= artist.id %>">More details</a></p>
+  <hr />
+<% end %>

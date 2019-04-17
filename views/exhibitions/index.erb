@@ -1,0 +1,17 @@
+<form action="/exhibitions/browse_by_artist" method="GET">
+<select name="artist_id" id="artist_select">
+  <% @artists.each do |artist| %>
+    <option value=<%= artist.id %>><%= artist.name %></option>
+  <% end %>
+</select>
+<input class="btn btn--action" type="submit" value="Browse by artist"/>
+</form>
+
+
+
+<% @exhibitions.each do |exhibition| %>
+  <p>Title: <%= exhibition.title() %></p>
+  <p><%= exhibition.time_of_exhibition %> - <%= exhibition.date_of_exhibition %></p>
+  <p><a href="/exhibitions/<%= exhibition.id %>">More details</a></p>
+  <hr />
+<% end %>

@@ -1,0 +1,9 @@
+<form method="get" action="/exhibitions_manager/new">
+  <input type="submit" value="New exhibition"/></form>
+
+<% @exhibitions.each do |exhibition| %>
+  <p>Title: <%= exhibition.title %></p>
+  <p><%= exhibition.time_of_exhibition %> - <%= exhibition.date_of_exhibition %></p>
+  <p><a href="/exhibitions_manager/<%= exhibition.id %>">More details</a></p>
+  <hr />
+<% end %>

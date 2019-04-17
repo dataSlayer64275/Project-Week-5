@@ -1,0 +1,32 @@
+<form action="/exhibitions_manager" method="POST">
+
+
+  <label for = "title">Title:</label>
+  <input id = "title" type = "text" name = "title" />
+
+  <label for="artist_select">Select artist:</label>
+  <select name="artist_id" id="artist_select">
+    <% @artists.each do |artist| %>
+      <option value=<%= artist.id %>><%= artist.name %></option>
+    <% end %>
+  </select>
+
+  <label for="category_select">Select category:</label>
+  <select name="category_id" id="category_select">
+    <% @categories.each do |category| %>
+      <option value=<%= category.id %>><%= category.type %></option>
+    <% end %>
+  </select>
+
+  <label for = "date_of_exhibition">Date:</label>
+  <input id = "date_of_exhibition" type = "date" name = "date_of_exhibition"/>
+
+  <label for = "time_of_exhibition">Time:</label>
+  <input id = "time_of_exhibition" type = "time" name = "time_of_exhibition"/>
+
+  <label for = "description">Description:</label>
+  <input id = "description" type = "text" name = "description"/>
+
+  <input class="btn btn--action" type="submit" value="Add new exhibition"/>
+
+</form>

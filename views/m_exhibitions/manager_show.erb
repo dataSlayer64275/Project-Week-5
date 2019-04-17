@@ -1,0 +1,10 @@
+<p>Title: <%= @exhibition.title %></p>
+<p>Artist: <%= @exhibition.artist.name %></p>
+<p>Category: <%= @exhibition.category.type %></p>
+<p>Time: <%= @exhibition.time_of_exhibition %></p>
+<p>Date: <%= @exhibition.date_of_exhibition %></p>
+<p>Description: <%= @exhibition.description %></p>
+<form method="get" action="/exhibitions_manager/<%= @exhibition.id %>/edit">
+  <input type="submit" value="Edit exhibition"/></form>
+<form method="post" action="/exhibitions_manager/<%= @exhibition.id %>/delete">
+  <input type="submit" value="Delete exhibition"/></form>

@@ -1,0 +1,36 @@
+<form method="POST" action="/artists_manager/<%= @artist.id %>">
+
+  <label for="name">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= @artist.name %>"
+  />
+
+  <label for="year_of_birth">Year of birth:</label>
+  <input
+  type="number"
+  name="year_of_birth"
+  id="year_of_birth"
+  value="<%= @artist.year_of_birth %>"
+  />
+
+  <label for="year_of_death">Year of death:</label>
+  <input
+  type="number"
+  name="year_of_death"
+  id="year_of_death"
+  value="<%= @artist.year_of_death %>"
+  />
+
+  <label for="biography">Biography:</label>
+  <input
+  type="text"
+  name="biography"
+  id="biography"
+  value="<%= @artist.biography() %>"
+  />
+
+  <input type='submit' value="Edit artist">
+</form>
